@@ -2,11 +2,11 @@ import numpy as np
 from sklearn.tree import DecisionTreeRegressor,plot_tree
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, mean_squared_error
-from sklearn.datasets import fetch_california_housing
+from sklearn.datasets import load_iris
 import pandas as pd
 import matplotlib.pyplot as plt
 
-housing = fetch_california_housing()
+housing = load_iris()
 data = pd.DataFrame(housing.data,columns=housing.feature_names)
 data["price"] = housing.target
 data = data.head(100)
